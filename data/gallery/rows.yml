@@ -1,0 +1,35 @@
+rows:
+  - images:
+    - weight: 1
+      href: "placeholder-columns"
+      src: "placeholder-columns"
+      width: "448"
+      height: "299"
+      alt: "Ancient columns, a water feature and a blue sky"
+      caption: "This gallery image has a caption."
+    - weight: 2
+      href: "placeholder-skyscrapers"
+      src: "placeholder-skyscrapers"
+      width: "448"
+      height: "299"
+      alt: "Skyscrapers in a brightly lit city at dusk"
+  - images:
+    - weight: 3
+      href: "placeholder-sprinkler"
+      src: "placeholder-sprinkler"
+      width: "334"
+      height: "223"
+      alt: "Sprinkler"
+    - weight: 4
+      href: "placeholder-town"
+      src: "placeholder-town"
+      width: "335"
+      height: "224"
+      alt: "Town"
+      caption: "This <em>gallery</em> image also has a <strong>caption</strong> with HTML."
+    - weight: 5
+      href: "placeholder-waterfall"
+      src: "placeholder-waterfall"
+      width: "223"
+      height: "223"
+      alt: "The caption's testing apostrophe"

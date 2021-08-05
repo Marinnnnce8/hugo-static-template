@@ -1,0 +1,25 @@
+{{ $current := . }}
+<!doctype html>
+<html lang='{{ .Site.LanguageCode | default "en-gb" }}' class='template-{{ .Params.template }}'>
+	<head>
+		{{ partial "head/head.html" . }}
+	</head>
+	<body>
+		{{ partial "header.html" . }}
+		<main class='uk-margin-large-bottom'>
+			{{ block "main" . }}{{ end }}
+		</main>
+		{{ partial "footer/footer.html" . }}
+		{{ partial "footer/script-footer.html" . }}
+	</body>
+	<div id="mmenu" class="uk-hidden">
+		<ul>
+			{{ $currentPage := . }}
+			{{ range .Site.Menus.main }}
+				<li{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class='uk-active'{{ end }}>
+					<a href='{{ .URL | relURL }}'>{{ .Name }}</a>
+				</li>
+			{{ end }}
+		</ul>
+	</div>
+</html>

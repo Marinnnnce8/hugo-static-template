@@ -1,0 +1,46 @@
+<header class='header' data-uk-sticky='{{ dict "media" 960 "animation" "uk-animation-slide-top" "show-on-up" true | jsonify }}'>
+	<nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+
+		<div class='uk-navbar-left'>
+			<a href='/' class='uk-navbar-item uk-logo'>
+				<img src='/img/logo.png' alt='{{ .Site.Title }} Logo'>
+			</a> 
+		</div>
+
+		<div class='uk-navbar-right'>
+			<div id='nav' class='uk-visible@m'>
+				<ul class='uk-navbar-nav'>
+					{{ $currentPage := . }}
+					{{ range .Site.Menus.main }}
+						{{ if .HasChildren }}
+							<li{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class='uk-active'{{ end }}>
+								<a href="{{ .URL | relURL }}">
+									{{ .Name }}
+								</a>
+							</li>
+							<div data-uk-dropdown>
+								<ul class="uk-nav uk-navbar-dropdown-nav" id="nav-{{ .Identifier }}">
+									{{ range .Children }}
+										<li class="{{ if $currentPage.IsMenuCurrent "main" . }}uk-active{{ end }}">
+											<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+										</li>
+									{{ end }}
+								</ul>
+							</div>
+						{{ else }}
+							<li>
+								<a href="{{ .URL | relURL }}">
+									{{ .Name }}
+								</a>
+							</li>
+						{{ end }}
+					{{ end }}
+				</ul>
+			</div>
+			<a href="#mmenu" class="uk-navbar-toggle uk-hidden@m" aria-label="Toggle Navigation">
+				<span data-uk-navbar-toggle-icon></span>
+				<span class="uk-hidden" data-uk-close></span>
+			</a>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,9 @@
+{{- define "title" -}}{{- with .Params.title -}}{{- . -}} | {{- end -}}{{- .Site.Title -}}{{- end -}}
+{{- define "main" -}}
+	<div class='uk-container uk-container-small'>
+		<h1>{{ .Params.title }}</h1>
+		{{- with .Params.intro -}}
+			<p class='uk-text-lead'>{{ . }}</p>
+		{{- end -}}
+	</div>
+{{- end -}}

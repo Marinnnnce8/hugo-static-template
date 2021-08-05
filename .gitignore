@@ -1,0 +1,32 @@
+# Hugo output
+/public
+/resources
+
+# OS
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+Thumbs.db
+.DS_Store
+
+# Node
+package-lock.json
+/node_modules
+
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+
+# Environment Variables / Keys
+.env
+
+# Vagrant
+.vagrant/
+
+# UIkit - todo can this be moved to using node_modules?
+/static/css/uikit.min.css
+/static/js/uikit.min.js
+/static/js/uikit-icons.min.js

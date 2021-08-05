@@ -1,0 +1,17 @@
+# All paths
+
+/*
+
+	Referrer-Policy: no-referrer-when-downgrade
+
+	Content-Security-Policy: default-src 'none'; script-src 'self' identity.netlify.com d33wubrfki0l68.cloudfront.net *.google.com *.gstatic.com *.googleapis.com www.google-analytics.com www.googletagmanager.com nbstats.co.uk; style-src 'self' 'unsafe-inline' d33wubrfki0l68.cloudfront.net *.googleapis.com; img-src 'self' data: d33wubrfki0l68.cloudfront.net *.google.com *.googleapis.com *.gstatic.com *.ggpht.com www.google-analytics.com www.googletagmanager.com  *.cdninstagram.com *.nbcommunication.com *.youtube.com *.ytimg.com; connect-src 'self' www.google-analytics.com; font-src 'self' fonts.gstatic.com; object-src 'self'; media-src 'self' data:; manifest-src 'self'; frame-src www.google.com www.youtube.com www.youtube-nocookie.com player.vimeo.com w.soundcloud.com *.mixcloud.com; form-action 'self'; base-uri 'self'; frame-ancestors 'self'
+
+	X-Content-Type-Options: nosniff
+
+	X-Frame-Options: SAMEORIGIN
+
+	X-Xss-Protection: 1; mode=block
+
+/nbadmin
+
+	Content-Security-Policy: default-src 'none'; script-src 'self' 'unsafe-eval' identity.netlify.com unpkg.com d33wubrfki0l68.cloudfront.net; style-src 'self' 'unsafe-inline' d33wubrfki0l68.cloudfront.net; img-src 'self' data: blob: d33wubrfki0l68.cloudfront.net *.nbcommunication.com; connect-src 'self' blob:; font-src 'self'; object-src 'self'; media-src 'self' data:; manifest-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'

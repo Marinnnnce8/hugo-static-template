@@ -1,0 +1,9 @@
+{{/* 
+	Sitemap
+	@todo filter unwanted pages and implement nesting 
+*/}}
+<ul class='nb-sitemap'>
+	{{ range .Site.RegularPages }}{{/* @todo filter unwanted pages and implement nesting */}}
+	<li><a href='{{ .RelPermalink }}'>{{ .Title }}</a></li>
+	{{ end }}
+</ul>

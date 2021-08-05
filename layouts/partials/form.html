@@ -1,0 +1,91 @@
+{{/*
+	Form
+*/}}
+{{- $form := index .Site.Data "forms" .File.TranslationBaseName -}}
+<div class='nb-block nb-block-form'>
+	<form id='{{ $form.id }}' class='{{ $form.class }}' method='post' data-netlify='true'>
+		{{- if isset $form "label" -}}<h3>{{ $form.label }}</h3>{{- end -}}
+		<div class='{{ $form.grid }}' data-uk-grid>
+			{{- range $form.fields -}}
+				{{- $field := . -}}
+				{{- $id := print $form.id "_" $field.name -}}
+				<div class='Inputfield uk-width-1-1' id='wrap_{{ $id }}'>
+					<label class='uk-form-label' for='{{ $id }}'>{{ $field.label }}</label>
+					<div class='nb-form-content'>
+						{{- $.Scratch.Set "attrs" slice -}}
+
+						{{/* Set ID */}}
+						{{- if not (isset $field "id") -}}
+							{{- $.Scratch.Add "attrs" (printf "id='%s'" $id) -}}
+						{{- end -}}
+
+						{{/* Get/Set Attributes */}}
+						{{- range $key, $value := $field -}}
+							{{ if ne $key "label" }}
+							{{ if and (eq $key "required") (eq $value false) }}
+								{{/* Do not add required=false */}}
+							{{ else }}
+								{{ $.Scratch.Add "attrs" (printf "%s='%s'" $key $value | safeHTMLAttr) }}
+							{{ end }}
+							{{ end }}
+						{{- end -}}
+
+						{{/* Set required */}}
+						{{- if not (isset $field "required") -}}
+							{{- $.Scratch.Add "attrs" "required" -}}
+						{{- end -}}
+
+						{{- with (eq $field.input "textarea") -}}
+
+							{{/* Textarea */}}
+
+							{{/* Set class */}}
+							{{- if not (isset $field "class") -}}
+								{{- $.Scratch.Add "attrs" "class='uk-textarea'" -}}
+							{{- end -}}
+
+							{{/* Set rows */}}
+							{{- if not (isset $field "rows") -}}
+								{{- $.Scratch.Add "attrs" "rows='9'" -}}
+							{{- end -}}
+
+							{{/* Render */}}
+							<textarea {{ delimit ($.Scratch.Get "attrs") " " | safeHTMLAttr }}></textarea>
+
+						{{- else -}}
+
+							{{/* Input */}}
+
+							{{/* Set type */}}
+							{{- if not (isset $field "type") -}}
+								{{- $.Scratch.Add "attrs" "type='text'" -}}
+							{{- end -}}
+
+							{{/* Set class */}}
+							{{- if not (isset $field "class") -}}
+								{{- $.Scratch.Add "attrs" "class='uk-input'" -}}
+							{{- end -}}
+
+							{{/* Render */}}
+							<div role="alert"></div>
+							<input {{ delimit ($.Scratch.Get "attrs") " " | safeHTMLAttr }} />
+						{{ end }}
+					</div>
+				</div>
+			{{ end }}
+			{{ if $form.recaptcha }}
+				<div class='uk-width-1-1'>
+					<div class='nb-form-content'>
+						<div data-netlify-recaptcha="true"></div>
+					</div>
+				</div>
+			{{- end -}}
+			{{ $id := print $form.id "_submit" }}
+			<div class='uk-width-1-1' id='wrap_{{ $id }}'>
+				<div class='nb-form-content'>
+					<button id='{{ $id }}' class='{{ $form.submit.class }}' name='submit' type='submit'>{{ $form.submit.label }}</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

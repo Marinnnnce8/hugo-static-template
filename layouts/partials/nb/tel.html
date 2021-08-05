@@ -1,0 +1,16 @@
+{{/*
+	NB Tel
+	Render a phone number as a nb-tel link
+*/}}
+{{- $data := . -}}
+{{- $tel := $data -}}
+{{- $text := $tel -}}
+{{ if reflect.IsMap $data }}
+	{{- $tel = $data.tel -}}
+	{{- $text = $tel -}}
+	{{- if and (isset $data "text") (ne $data.text "") -}}
+		{{- $text = $data.text -}}
+	{{- end -}}
+{{ end }}
+{{ $tel := replaceRE "(\\s)" "" $tel }}
+{{- partial "nb/obfuscate.html" (dict "data" (dict "href" (print "tel:" $tel) "text" $text) "label" "Make a call") -}}

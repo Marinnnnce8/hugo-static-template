@@ -1,0 +1,2 @@
+baseurl = "https://nb-next.netlify.app/"
+canonifyURLs = true

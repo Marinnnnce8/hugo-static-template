@@ -1,0 +1,15 @@
+{{/*
+	NB Mailto
+	Render the email address as an obfuscated nb-mailto link
+*/}}
+{{- $data := . -}}
+{{- $email := $data -}}
+{{- $text := $email -}}
+{{ if reflect.IsMap $data }}
+	{{- $email = $data.email -}}
+	{{- $text = $email -}}
+	{{- if and (isset $data "text") (ne $data.text "") -}}
+		{{- $text = $data.text -}}
+	{{- end -}}
+{{ end }}
+{{- partial "nb/obfuscate.html" (dict "data" (dict "href" (print "mailto:" $email) "text" $text) "label" "Send an email") -}}

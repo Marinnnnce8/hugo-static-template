@@ -1,0 +1,61 @@
+# Meta Data for SEO
+
+## Homepage
+title = "NB Communication"
+titleSeparator = "-"
+titleAddition = "Modern Documentation Theme"
+description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+
+## Menu
+menu = true
+
+## Open Graph + Twitter Cards
+images = ["doks.png"]
+twitterSite = ""
+twitterCreator = ""
+facebookAuthor = ""
+facebookPublisher = ""
+ogLocale = "en_US"
+
+## JSON-LD
+schemaType = "Organization"
+schemaLogo = "logo-doks.png"
+schemaTwitter = "https://twitter.com/"
+schemaLinkedIn = "https://www.linkedin.com/"
+schemaGitHub = "https://github.com/"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+tileColor = "#da532c"
+maskIconColor = "#5bbad5"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+
+# Footer
+clientName = "NB Communication"
+
+# Alert
+alert = false
+alertText = "This is some alert text!</a>"
+
+# Edit Page
+docsRepo = "https://github.com/nbcommunication/nb-template-site-static"
+editPage = false
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  uikitJs = true
+  mmenuJs = true
+  breadCrumb = false

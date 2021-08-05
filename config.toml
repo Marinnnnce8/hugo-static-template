@@ -1,0 +1,25 @@
+title = "NB Communication"
+baseURL = "https://template-site-hugo.netlify.com/"
+languageCode = "en-gb"
+publishDir = "public"
+uglyURLs = false
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+[author]
+	name = "NB Communication"
+
+[params]
+	strapline = "@todo"
+	email = "administrator@nbcommunication.com"
+	dateFormat = "02 Jan 2006"
+
+[markup.goldmark.renderer]
+	unsafe = true
+
+[outputs]
+	home = ["HTML"]
+	section = ["HTML"]
+
+[sitemap]
+	filename = "sitemap.xml"

@@ -1,0 +1,4 @@
+---
+template: legal
+title: Disclaimer
+---

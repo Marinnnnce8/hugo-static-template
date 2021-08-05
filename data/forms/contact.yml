@@ -1,0 +1,33 @@
+id: "nb-form-contact"
+class: "uk-form-stacked uk-width-2-3@s uk-width-3-5@m InputfieldForm"
+label: "Contact Form"
+grid: "uk-grid-small uk-grid-stack"
+fields:
+  - {
+    name: "name",
+    label: "Your Name",
+    title: "Please enter your name"
+  }
+  - {
+    type: "email",
+    name: "email",
+    label: "Email Address",
+    title: "Please enter your email address"
+  }
+  - {
+    type: "tel",
+    name: "tel",
+    label: "Telephone",
+    required: false,
+    placeholder: "Optional"
+  }
+  - {
+    input: "textarea",
+    name: "enquiry",
+    label: "Your Enquiry",
+  }
+recaptcha: true
+submit: {
+  label: "Send",
+  class: "uk-button uk-button-primary"
+}
