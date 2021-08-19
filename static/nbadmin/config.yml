@@ -363,12 +363,12 @@ collections:
           - *title
           - *intro
           - *seo
-      - label: "NB Styleguide"
-        name: "nb-styleguide"
-        file: "content/nb.styleguide.md"
+      - label: "Styleguide"
+        name: "styleguide"
+        file: "content/styleguide.md"
         fields:
           - << : *template
-            default: nb-styleguide
+            default: styleguide
           - *title
           - *headline
           - *intro
@@ -377,12 +377,12 @@ collections:
           - *display
           - *social
           - *seo
-      - label: "NB Styleguide (Blocks)"
-        name: "nb-styleguide-blocks"
-        file: "content/nb.styleguide-blocks.md"
+      - label: "Styleguide With Banner"
+        name: "styleguide-with-banner"
+        file: "content/styleguide-with-banner.md"
         fields:
           - << : *template
-            default: nb-styleguide-blocks
+            default: styleguide-with-banner
           - *title
           - *headline
           - *intro

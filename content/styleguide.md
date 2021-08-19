@@ -1,6 +1,6 @@
 ---
 template: nb-styleguide
-title: NB Styleguide
+title: Styleguide
 headline: This is the Styleguide h1
 intro: >-
   This is some lead text to introduce the styleguide. It should gently catch the

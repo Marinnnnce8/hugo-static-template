@@ -19,9 +19,9 @@
 								</a>
 							</li>
 							<div data-uk-dropdown>
-								<ul class="uk-nav uk-navbar-dropdown-nav" id="nav-{{ .Identifier }}">
+								<ul class='uk-nav uk-navbar-dropdown-nav' id='nav-{{ .Identifier }}'>
 									{{ range .Children }}
-										<li class="{{ if $currentPage.IsMenuCurrent "main" . }}uk-active{{ end }}">
+										<li class='{{ if $currentPage.IsMenuCurrent "main" . }}uk-active{{ end }}'>
 											<a href="{{ .URL | relURL }}">{{ .Name }}</a>
 										</li>
 									{{ end }}
@@ -37,9 +37,9 @@
 					{{ end }}
 				</ul>
 			</div>
-			<a href="#mmenu" class="uk-navbar-toggle uk-hidden@m" aria-label="Toggle Navigation">
+			<a href='#mmenu' class='uk-navbar-toggle uk-hidden@m' aria-label='Toggle Navigation'>
 				<span data-uk-navbar-toggle-icon></span>
-				<span class="uk-hidden" data-uk-close></span>
+				<span class='uk-hidden' data-uk-close></span>
 			</a>
 		</div>
 	</nav>

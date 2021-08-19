@@ -1,5 +1,5 @@
 {{ if .link }}
-<a href="{{ .link }}" class="uk-button uk-button-{{.style | default "default"}}{{if .size}} uk-button-{{ .size}}{{end}}" {{if .target }} target="{{ .tagret }}"{{end}} {{if .rel }} rel="{{ .rel }}"{{end}}>
+<a href="{{ .link }}" class='uk-button uk-button-{{.style | default "default"}}{{if .size}} uk-button-{{ .size}}{{end}}' {{if .target }} target='{{ .tagret }}'{{end}} {{if .rel }} rel='{{ .rel }}'{{end}}>
 	{{ if (eq .iconposition "left") }}
 		{{ if ($.Params) }}
 			{{- partial "inline-svg" $.Params -}}
@@ -13,7 +13,7 @@
 	{{ end }}
 </a>
 {{else}}
-<button type="button" class="uk-button uk-button-{{.style | default "default"}}{{if .size}} uk-button-{{ .size}}{{end}}">
+<button type="button" class='uk-button uk-button-{{.style | default "default"}}{{if .size}} uk-button-{{ .size}}{{end}}'>
 	{{ if (eq .iconposition "left") }}
 		{{ if ($.Params) }}
 			{{- partial "inline-svg" $.Params -}}

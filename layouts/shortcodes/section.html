@@ -1,0 +1,6 @@
+<section class='uk-section{{if (.Get "sectionClass") }} {{ (.Get "sectionClass") }}{{end}}' id='{{if (.Get "id") }}{{ (.Get "id") }}{{else}}section-{{ .Page.Title }}{{end}}'>
+    <div class='uk-container{{if (.Get "size") }} uk-container-{{ (.Get "size") }}{{end}}{{if (.Get "class") }} {{ (.Get "class") }}{{end}}'>
+    <h2>{{ (.Get "heading") }}</h2>
+        {{ .Inner }}
+    <div>
+</section>

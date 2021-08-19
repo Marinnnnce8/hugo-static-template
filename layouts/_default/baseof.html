@@ -5,21 +5,42 @@
 		{{ partial "head/head.html" . }}
 	</head>
 	<body>
-		{{ partial "header.html" . }}
-		<main class='uk-margin-large-bottom'>
-			{{ block "main" . }}{{ end }}
-		</main>
-		{{ partial "footer/footer.html" . }}
-		{{ partial "footer/script-footer.html" . }}
+		<div>
+			{{ partial "header.html" . }}
+			<main class='uk-margin-large-bottom'>
+				{{ block "main" . }}{{ end }}
+			</main>
+			{{ partial "footer/footer.html" . }}
+		</div>
+
+		<div id="mmenu" class="uk-hidden">
+			<ul>
+				{{ $currentPage := . }}
+				{{ range .Site.Menus.main }}
+					{{ if .HasChildren }}
+						<li class='{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} uk-active{{ end }}'>
+							<a href="{{ .URL | relURL }}">
+								{{ .Name }}
+							</a>
+							<ul id='nav-{{ .Identifier }}'>
+								{{ range .Children }}
+									<li>
+										<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+									</li>
+								{{ end }}
+							</ul>
+						</li>
+					{{ else }}
+						<li>
+							<a href="{{ .URL | relURL }}">
+								{{ .Name }}
+							</a>
+						</li>
+					{{ end }}
+				{{ end }}				
+			</ul>
+		</div>
+		
+		{{ partial "foot.html" . }}
 	</body>
-	<div id="mmenu" class="uk-hidden">
-		<ul>
-			{{ $currentPage := . }}
-			{{ range .Site.Menus.main }}
-				<li{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class='uk-active'{{ end }}>
-					<a href='{{ .URL | relURL }}'>{{ .Name }}</a>
-				</li>
-			{{ end }}
-		</ul>
-	</div>
 </html>

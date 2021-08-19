@@ -5,7 +5,7 @@
  *
  */
 
-const main = {
+ const main = {
 
 	init: () => {
 

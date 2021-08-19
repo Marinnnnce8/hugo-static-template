@@ -52,10 +52,4 @@ docsRepo = "https://github.com/nbcommunication/nb-template-site-static"
 editPage = false
 
 [options]
-  lazySizes = true
-  clipBoard = true
-  instantPage = true
-  flexSearch = true
-  uikitJs = true
   mmenuJs = true
-  breadCrumb = false

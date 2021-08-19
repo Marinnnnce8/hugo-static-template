@@ -74,5 +74,8 @@ rel  = "sitemap"
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "node_modules/flexsearch"
-    target = "assets/js/vendor/flexsearch"
+    source = "./node_modules/uikit/dist/js"
+    target = "assets/js"
+  [[module.mounts]]
+    source = "./node_modules/mmenu-js/dist/js"
+    target = "assets/js"

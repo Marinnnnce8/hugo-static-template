@@ -1,16 +1,16 @@
-<div class="gallery">
+<div class='gallery'>
 	<div class='uk-container uk-container-small'>
 
 		{{ with .Get "title" }}<h3>{{.}}</h3>{{end}}
 
-		<div class="gallery-wrap" data-uk-lightbox="animation: fade" data-uk-scrollspy="cls: uk-animation-fade; delay: 128; target: > .gallery-row > .gallery-image">
+		<div class='gallery-wrap' data-uk-lightbox='animation: fade' data-uk-scrollspy='cls: uk-animation-fade; delay: 128; target: > .gallery-row > .gallery-image'>
 			{{ if .Site.Data.gallery }}
 				{{ range .Site.Data.gallery }}
 					{{ range .rows }}
-						<div class="gallery-row">
+						<div class='gallery-row'>
 							{{ range $index, $element := sort .images "weight" }}
-								<a href="/img/gallery/{{ .href }}.jpg" class="gallery-image" data-alt={{ .alt }} {{if .caption}} data-caption="<div>{{ .caption }}</div>"{{end}}>
-									<img src="/img/gallery/{{ .src }}.jpg" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="lazy">
+								<a href='/img/gallery/{{ .href }}.jpg' class='gallery-image' data-alt='{{ .alt }}' {{if .caption}} data-caption='<div>{{ .caption }}</div>'{{end}}>
+									<img src='/img/gallery/{{ .src }}.jpg' alt='{{ .alt }}' width='{{ .width }}' height='{{ .height }}' loading='lazy'>
 								</a>
 							{{end}}
 						</div>
@@ -18,7 +18,7 @@
 				{{end}}
 			{{end}}
 		</div>
-		{{with .Get "caption"}}<div class="gallery-caption uk-text-center uk-margin-small-top">{{.}}</div>{{end}}
+		{{with .Get "caption"}}<div class='gallery-caption uk-text-center uk-margin-small-top'>{{.}}</div>{{end}}
 
 	</div>
 </div>

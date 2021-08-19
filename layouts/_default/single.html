@@ -1,14 +1,16 @@
 {{- define "title" -}}{{- with .Params.title -}}{{- . -}} | {{- end -}}{{- .Site.Title -}}{{- end -}}
 {{- define "main" -}}
-	<div class="banner uk-cover-container uk-position-relative uk-light">
-		<img src="{{if .Params.banner.src}}{{.Params.banner.src}}{{else}}https://aws.nbcommunication.com/template/img/placeholder-castle-banner.jpg{{end}}" alt="" data-uk-cover>
-		<div class="uk-overlay uk-position-bottom">
-			<div class="uk-container">
-				<h1>{{ .Params.title }}</h1>
-				{{if (ne .Params.name "home")}}{{ partial "breadcrumb.html" . }}{{end}}
+	{{if (eq .Page.Title "Styleguide With Banner")}}
+		<div class='banner uk-cover-container uk-position-relative uk-light'>
+			<img src="{{if .Params.banner.src}}{{.Params.banner.src}}{{else}}https://aws.nbcommunication.com/template/img/placeholder-castle-banner.jpg{{end}}" alt="" data-uk-cover>
+			<div class='uk-overlay uk-position-bottom'>
+				<div class='uk-container'>
+					<h1>{{ .Params.title }}</h1>
+					{{if (ne .Params.name "home")}}{{ partial "breadcrumb.html" . }}{{end}}
+				</div>
 			</div>
 		</div>
-	</div>
+	{{end}}
 	<div class='uk-margin-top'>
 		<div class='uk-container uk-container-small'>
 			<h1>{{ .Params.title }}</h1>
