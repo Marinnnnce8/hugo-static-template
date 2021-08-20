@@ -51,5 +51,3 @@ alertText = "This is some alert text!</a>"
 docsRepo = "https://github.com/nbcommunication/nb-template-site-static"
 editPage = false
 
-[options]
-  mmenuJs = true

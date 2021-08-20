@@ -1,4 +1,6 @@
-<script src='/js/uikit.min.js'></script>
-<script src='/js/nbkit.min.js'></script>
-<script src='/js/mmenu.js'></script>
-<script src='/js/main.js'></script>
+{{ $uk := resources.Get "js/uikit.min.js" }}
+<script src="{{ $uk.Permalink }}"></script>
+<script src='{{ .Site.BaseURL }}js/nbkit.min.js'></script>
+{{ $mmenu := resources.Get "js/mmenu.js" }}
+<script src="{{ $mmenu.Permalink }}"></script>
+<script src='{{ .Site.BaseURL }}js/main.js'></script>

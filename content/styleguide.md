@@ -147,7 +147,6 @@ Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. D
   </div>
 {{< /grid >}}
 
-test
 
 <!---
 Icons
