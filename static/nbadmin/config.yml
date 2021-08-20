@@ -299,7 +299,7 @@ collections:
   - name: "posts"
     label: "Post"
     description: ""
-    folder: "content/news"
+    folder: "content/posts"
     filter: {field: "template", value: post}
     create: true
     fields:
