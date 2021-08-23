@@ -42,7 +42,7 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 
 Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna example link. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.
 
-> Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna [example link](https://pw.nbcom.co.uk/nb.styleguide/). Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.
+{{< quote author="Quote Author">}} Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna [example link](https://pw.nbcom.co.uk/nb.styleguide/). Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum. {{< /quote >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui.
 
