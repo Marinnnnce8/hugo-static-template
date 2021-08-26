@@ -9,10 +9,11 @@ append: "gallery"
 append: "slideshow"
 ---
 
+{{% content %}}
 Lorem ipsum dolor sit amet, **here's some bold text**. Aliquam at ligula *here's some italic text*. Nulla facilisi. In in turpis non eros vehicula adipiscing in ***feugiat ligula***. Vivamus et nulla ultricies , auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna [example link](/nb.styleguide/). Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.
 
 <figure class="align_center hidpi">
-  <a href="{{.Params.aws}}/img/placeholder-castle-banner.jpg">
+  <a href="https://aws.nbcommunication.com/template/img/placeholder-castle-banner.jpg">
     <img alt="This is a centre aligned image" src="https://aws.nbcommunication.com/template/img/placeholder-castle-banner.jpg" width="960"/>
   </a>
   <figcaption>This is a centred image</figcaption>
@@ -47,8 +48,11 @@ Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros v
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui.
 
+{{% /content %}}
+
 {{< gallery title="Gallery" caption="A Gallery Caption" >}}
 
+{{% content %}}
 #### Heading h4
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.
@@ -65,9 +69,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleif
 1. A list of ordered links- a link with some further text
 2. A list of ordered links
 3. A list of ordered links
+{{% /content %}}
 
-{{< slideshow title="Slideshow" >}}
+{{< slideshow title="Slideshow" id="styleguide-with-banner" >}}
 
+
+{{% content %}}
 ##### Heading h5
 
 Donec facilisis, elit vitae blandit accumsan, orci odio ornare libero, sed mollis urna magna nec mi. Integer at elementum mi, vitae facilisis purus 4th. Duis quis tellus quis lacus sagittis pharetra a at lorem. Praesent ornare ligula id arcu consequat egestas.
@@ -94,14 +101,18 @@ Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. D
 ### Embedded Videos
 
 <div class="responsive yt">
-  <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?modestbranding=1&rel=0&feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?modestbranding=1&rel=0&feature=oembed" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div class="responsive vm">
-  <iframe src="https://player.vimeo.com/video/63655754?dnt=1&app_id=122963" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Placeholder visual blip"></iframe>
+  <iframe src="https://player.vimeo.com/video/63655754?dnt=1&app_id=122963" width="1280" height="720" allow="autoplay; fullscreen" allowfullscreen title="Placeholder visual blip"></iframe>
 </div>
+{{% /content %}}
+
+<div class='content'>
 
 ## Buttons
+
 {{< grid class="uk-grid-medium uk-child-width-1-3@s" >}}
   <div>
     	<div class="uk-text-meta uk-form-label">Primary</div>
@@ -147,11 +158,12 @@ Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. D
     {{< button style="text" size="large" >}}
   </div>
 {{< /grid >}}
+</div>
 
 
 <!---
 Icons
-{{< svg "arrow-left" >}}
+{{% svg "arrow-left" %}}
 
-{{< svg "chevron-up" >}}
+{{% svg "chevron-up" %}}
 -->

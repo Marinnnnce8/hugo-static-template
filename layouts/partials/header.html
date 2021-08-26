@@ -17,16 +17,16 @@
 								<a href="{{ .URL | relURL }}">
 									{{ .Name }}
 								</a>
+								<div data-uk-dropdown>
+									<ul class='uk-nav uk-navbar-dropdown-nav' id='nav-{{ .Identifier }}'>
+										{{ range .Children }}
+											<li class='{{ if $currentPage.IsMenuCurrent "main" . }}uk-active{{ end }}'>
+												<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+											</li>
+										{{ end }}
+									</ul>
+								</div>
 							</li>
-							<div data-uk-dropdown>
-								<ul class='uk-nav uk-navbar-dropdown-nav' id='nav-{{ .Identifier }}'>
-									{{ range .Children }}
-										<li class='{{ if $currentPage.IsMenuCurrent "main" . }}uk-active{{ end }}'>
-											<a href="{{ .URL | relURL }}">{{ .Name }}</a>
-										</li>
-									{{ end }}
-								</ul>
-							</div>
 						{{ else }}
 							<li>
 								<a href="{{ .URL | relURL }}">

@@ -1,9 +1,7 @@
 {{ $current := . }}
 <!doctype html>
 <html lang='{{ .Site.LanguageCode | default "en-gb" }}' class='template-{{ .Params.template }}'>
-	<head>
-		{{ partial "head/head.html" . }}
-	</head>
+	{{ partial "head/head.html" . }}
 	<body>
 		<div>
 			{{ partial "header.html" . }}
@@ -22,7 +20,7 @@
 							<a href="{{ .URL | relURL }}">
 								{{ .Name }}
 							</a>
-							<ul id='nav-{{ .Identifier }}'>
+							<ul id='mob-nav-{{ .Identifier }}'>
 								{{ range .Children }}
 									<li>
 										<a href="{{ .URL | relURL }}">{{ .Name }}</a>

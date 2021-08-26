@@ -3,7 +3,7 @@
 
         {{ with .Get "title" }}<h3>{{.}}</h3>{{end}}
 
-        <div data-uk-slideshow='animation: fade; autoplay: true; autoplay-interval: 4096; ratio: 16:9' id='uk-slideshow-{{if .Get "id" }}{{.}}{{else}}{{.Page.Title}}{{end}}'>
+        <div data-uk-slideshow='animation: fade; autoplay: true; autoplay-interval: 4096; ratio: 16:9' id='uk-slideshow-{{with .Get "id" }}{{.}}{{else}}{{.Page.Title}}{{end}}'>
             <div class='uk-position-relative uk-visible-toggle uk-light'>
                 <ul class='uk-slideshow-items' data-uk-lightbox='animation: fade' data-uk-scrollspy='cls: uk-animation-slide-bottom-small'>
                     {{ if .Site.Data.slideshow }}

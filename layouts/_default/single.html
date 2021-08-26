@@ -17,9 +17,15 @@
 			{{- with .Params.intro -}}
 				<p class='uk-text-lead'>{{ . }}</p>
 			{{- end -}}
-			<div class='content'>
+			{{- if eq .Params.template "nb-styleguide" -}}
 				{{ .Content }}
-			</div>
+			{{- else if eq .Params.template "styleguide-with-banner" -}}
+				{{ .Content }}
+			{{- else -}}
+				<div class='content'>
+					{{ .Content }}
+				</div>			
+			{{- end -}}
 			{{- if eq .Params.template "contact" -}}
 				{{ partial "form.html" . }}
 			{{- end -}}

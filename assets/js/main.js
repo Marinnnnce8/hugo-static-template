@@ -28,7 +28,7 @@
 					return uk.attr(a, 'href').match(/\.(jpg|jpeg|png|gif|webp)/i);
 				})).forEach((a) => {
 
-					const figure = a.parentElement;
+					let figure = a.parentElement;
 					if (figure.nodeName !== 'FIGURE') {
 						uk.wrapAll(a, '<figure>');
 						figure = a.parentElement;
