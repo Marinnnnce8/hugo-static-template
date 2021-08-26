@@ -65,7 +65,6 @@ fields:
     widget: markdown
   }
   # images
-  # @todo - not allowing multiple?
   - images: &images {
     label: "Images",
     name: images,

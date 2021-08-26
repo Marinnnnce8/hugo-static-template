@@ -4,10 +4,12 @@
 [build]
   publish = "public"
   functions = "functions"
+  command = "hugo"
 
 [build.environment]
-  NODE_VERSION = "15.5.1"
-  NPM_VERSION = "7.3.0"
+  HUGO_VERSION = "0.83.1"
+  NODE_VERSION = "14"
+  RUBY_VERSION = "2.7.1"
 
 [context.production]
   command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda"

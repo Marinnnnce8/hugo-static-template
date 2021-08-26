@@ -1,5 +1,5 @@
-title = "NB Communication"
-baseURL = "https://template-site-hugo.netlify.com/"
+title = "NB Template Static Site"
+baseURL = "https://nb-template-site-static.netlify.app/"
 languageCode = "en-gb"
 publishDir = "public"
 uglyURLs = false
@@ -10,9 +10,13 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 	name = "NB Communication"
 
 [params]
-	strapline = "@todo"
+	strapline = "NB Template Static Site"
 	email = "administrator@nbcommunication.com"
 	dateFormat = "02 Jan 2006"
+	analyticsID = ""
+
+[params.dev]
+  live = false
 
 [markup.goldmark.renderer]
 	unsafe = true

@@ -26,7 +26,16 @@ package-lock.json
 # Vagrant
 .vagrant/
 
-# UIkit - todo can this be moved to using node_modules?
-/static/css/uikit.min.css
-/static/js/uikit.min.js
-/static/js/uikit-icons.min.js
+# Applications
+*.app
+*.exe
+*.war
+
+# Package files
+*.jar
+
+# Compiled Java class files
+*.class
+
+# Log files
+*.log
