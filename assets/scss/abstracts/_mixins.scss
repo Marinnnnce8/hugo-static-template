@@ -4,41 +4,42 @@
 
 // Background Icon
 @mixin bg-icon($icon) {
-	background-image: url('data:image/svg+xml;utf8,' + $icon);
-	background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,'+ $icon);
+    background-repeat: no-repeat;
 }
 
 // Hover
 @mixin hover {
-	&:hover,
-	&:focus,
-	&:active,
-	&.uk-open,
-	&.uk-active {
-		@content;
-	}
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.uk-open,
+    &.uk-active {
+        @content;
+    }
 }
 
 // Image caption
 @mixin image-caption {
-	font-size: 0.8rem;
-	padding: $global-small-margin;
-	text-align: center;
+    font-size: 0.8rem;
+    padding: $global-small-margin;
+    text-align: center;
 }
 
 // Pseudo Icon
 @mixin pseudo-icon($icon) {
-	@include bg-icon($icon);
-	content: '';
-	background-size: contain;
-	display: inline-block;
+    @include bg-icon($icon);
+    content: '';
+    background-size: contain;
+    display: inline-block;
 }
 
 // Truncate text
 @mixin text-truncate {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 

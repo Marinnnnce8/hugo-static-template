@@ -1,66 +1,66 @@
 .nb-form {
 
-	+ .nb-form {
-		margin-top: $global-gutter;
-	}
+    +.nb-form {
+        margin-top: $global-gutter;
+    }
 
-	&-content {
-		position: relative;
+    &-content {
+        position: relative;
 
-		ul {
-			margin: 0 0 $global-small-margin;
-			padding: 0;
+        ul {
+            margin: 0 0 $global-small-margin;
+            padding: 0;
 
-			li {
-				display: inline-block;
-				list-style: none;
-				width: 100%;
-			}
-		}
+            li {
+                display: inline-block;
+                list-style: none;
+                width: 100%;
+            }
+        }
 
-		.InputfieldRadiosFloated {
+        .InputfieldRadiosFloated {
 
-			li {
-				padding-right: $global-gutter;
-				width: auto;
-			}
-		}
+            li {
+                padding-right: $global-gutter;
+                width: auto;
+            }
+        }
 
-		[aria-invalid='true'] {
-			border-color: $danger;
-		}
-	}
+        [aria-invalid='true'] {
+            border-color: $danger;
+        }
+    }
 
-	.uk-checkbox {
+    .uk-checkbox {
 
-		+ span {
-			display: inline-block;
-			margin-left: $global-small-margin;
-		}
-	}
+        +span {
+            display: inline-block;
+            margin-left: $global-small-margin;
+        }
+    }
 
-	.uk-radio {
+    .uk-radio {
 
-		+ span {
-			display: inline-block;
-			margin-left: $global-small-margin;
-		}
-	}
+        +span {
+            display: inline-block;
+            margin-left: $global-small-margin;
+        }
+    }
 
-	.InputfieldToggle {
+    .InputfieldToggle {
 
-		.InputfieldToggleHelper {
-			display: none !important;
-		}
-	}
+        .InputfieldToggleHelper {
+            display: none !important;
+        }
+    }
 
-	&-error {
-		font-size: $global-small-font-size;
-		font-weight: $base-strong-font-weight;
-		margin-bottom: $global-small-margin / 2;
-	}
+    &-error {
+        font-size: $global-small-font-size;
+        font-weight: $base-strong-font-weight;
+        margin-bottom: $global-small-margin / 2;
+    }
 
-	.g-recaptcha {
-		margin-bottom: $global-gutter;
-	}
+    .g-recaptcha {
+        margin-bottom: $global-gutter;
+    }
 }

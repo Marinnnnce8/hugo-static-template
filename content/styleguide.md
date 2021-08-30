@@ -53,6 +53,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleif
 {{< gallery title="Gallery" caption="A Gallery Caption" >}}
 
 {{% content %}}
+
 #### Heading h4
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.
@@ -73,8 +74,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleif
 
 {{< slideshow title="Slideshow" id="styleguide-with-banner" >}}
 
-
 {{% content %}}
+
 ##### Heading h5
 
 Donec facilisis, elit vitae blandit accumsan, orci odio ornare libero, sed mollis urna magna nec mi. Integer at elementum mi, vitae facilisis purus 4th. Duis quis tellus quis lacus sagittis pharetra a at lorem. Praesent ornare ligula id arcu consequat egestas.
@@ -93,6 +94,7 @@ Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. D
 | Row 4    | Lorem    | £99.99   | Lorem    | 07:00 - 23:00 |
 
 ## Messages
+
 <p class="uk-alert uk-alert-primary"><strong>Primary Text.</strong> This text is a message to the website user</p>
 <p class="uk-alert uk-alert-success"><strong>Success Text.</strong> This text is providing a positive message to the user</p>
 <p class="uk-alert uk-alert-warning"><strong>Warning Text.</strong> The text is providing a gentle warning to the user</p>
@@ -115,12 +117,12 @@ Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. D
 
 {{< grid class="uk-grid-medium uk-child-width-1-3@s" >}}
   <div>
-    	<div class="uk-text-meta uk-form-label">Primary</div>
-			{{< button link="#" style="primary" Params="arrow-right" >}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Primary Small</div>
-			{{< button style="primary" size="small" >}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Primary Large</div>
-			{{< button style="primary" size="large" >}}
+		<div class="uk-text-meta uk-form-label">Primary</div>
+		{{< button link="#" style="primary" Params="arrow-right" >}}
+		<div class="uk-text-meta uk-form-label uk-margin-top">Primary Small</div>
+		{{< button style="primary" size="small" >}}
+		<div class="uk-text-meta uk-form-label uk-margin-top">Primary Large</div>
+		{{< button style="primary" size="large" >}}
   </div>
   <div>
     <div class="uk-text-meta uk-form-label">Secondary</div>
@@ -147,19 +149,16 @@ Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. D
     <div class="uk-text-meta uk-form-label">Danger</div>
     {{< button style="danger" >}}
   </div>
-
   <div>
     <div class="uk-text-meta uk-form-label">Text Normal</div>
     {{< button style="text" >}}
   </div>
-
   <div>
     <div class="uk-text-meta uk-form-label">Text Large</div>
     {{< button style="text" size="large" >}}
   </div>
 {{< /grid >}}
 </div>
-
 
 <!---
 Icons

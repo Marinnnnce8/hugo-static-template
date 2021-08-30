@@ -11,15 +11,11 @@
   "browserslist": [
     "defaults"
   ],
-  "repository": "",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "init": "rimraf .git && git init -b main",
     "create": "hugo new",
     "prestart": "npm run clean",
-    "start": "hugo server --bind=0.0.0.0 --disableFastRender",
+    "start": "hugo server --bind=0.0.0.0 --disableFastRender && lint",
     "prebuild": "npm run clean",
     "build": "hugo --gc --minify && npm run build:functions",
     "build:functions": "netlify-lambda build assets/lambda",
@@ -43,7 +39,7 @@
     "eslint": "^7.24",
     "hugo-bin": "^0.71",
     "instant.page": "^5.1",
-    "markdownlint-cli": "^0.27",
+    "markdownlint-cli": "^0.28.1",
     "mermaid": "^8.10",
     "netlify-lambda": "^2.0",
     "postcss": "^8.2",
@@ -53,11 +49,12 @@
     "shx": "^0.3.3",
     "standard-version": "^9.2",
     "stylelint": "^13.13",
-    "stylelint-config-standard": "^22.0",
+    "stylelint-config-standard": "^22.0.0",
     "uikit": "^3.7.2"
   },
   "dependencies": {
     "mmenu-js": "^8.5.24"
   },
-  "sasslintConfig": ".sass-lint.yml"
+  "sasslintConfig": ".sass-lint.yml",
+  "main": "index.js"
 }
