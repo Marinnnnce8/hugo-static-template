@@ -9,10 +9,8 @@ append: "banner"
 {{< banner title="Homepage" >}}
 
 <section class='uk-margin-large-top'>
-
-    <div class='uk-container uk-container-large'>
+	<div class='uk-er uk-container-large'>
         <h2>Posts</h2>
         {{< posts >}}
     </div>
-
 </section>

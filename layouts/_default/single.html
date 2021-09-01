@@ -12,7 +12,7 @@
 		</div>
 	{{end}}
 	<div class='uk-margin-top'>
-		<div class='uk-container uk-container-small'>
+		<div class='uk-container uk-container-{{ .Site.Params.size }}'>
 			<h1>{{ .Params.title }}</h1>
 			{{- with .Params.intro -}}
 				<p class='uk-text-lead'>{{ . }}</p>

@@ -2,9 +2,7 @@
 
 NB Template Static Site
 
-A package for building static code, using [Gulp](https://gulpjs.com) for the build pipeline and [Hugo](https://gohugo.io/) for templating.
-
-*Note: Terminal commands are given for `yarn` but `npm` equivalents should also work.*
+A package for building static code [Hugo](https://gohugo.io/) for static site generation, [NetlifyCMS](https://www.netlifycms.org/) for content management and [Netlify](https://www.netlify.com/) for hosting.
 
 ## Installation
 
@@ -21,7 +19,7 @@ First run:
 
 	yarn build
 
-This will copy the `uikit.min.js` file into the `js` folder. It will also create public and resources folders with and it will copy assets into the `resources` folder.
+This will copy the `uikit.min.js` file into the `js` folder. It will also create public, functions and resources folders with and it will copy assets into the `resources` folder.
 
 If you need to run this task again run:
 
@@ -50,42 +48,12 @@ No SCSS that will be used elsewhere in the main theme should be placed in the `u
 
 See https://github.com/uikit/uikit/tree/develop/src/scss for more information on the above and https://getuikit.com/docs/sass for more information on UIkit themeing in general.
 
-### Creating a Template
-To create a new template run:
-
-	yarn cf -t template-name
-
-This will create a new Handlebars template in `src/html` and a JSON file in `src/html/data` using the name you have specified.
-
-### Creating a Component
-To create a new component run:
-
-	yarn cf -c component-name
-
-This will create a new Handlebars partial in `src/html/partials/components`, and a new SCSS file in `src/scss/components` with the name you have specified. It will also add the **@import** statement to `main.scss`.
-
-*Note: `-m` will also work*
-
-### Removing a Template
-You may not need a template anymore. To remove it, run:
-
-	yarn rf -t template-name
-
-This will remove the Handlebars template.
-
-### Removing a Component
-If you no longer require a component, run
-
-	yarn rf -c component-name
-
-If the name matches (beware of hyphen vs camel case in existing components), it will remove both the Handlebars partial and the SCSS file, and also remove the **@import** statement from `main.scss`.
-
-## Handlebars
+## Hugo
 
 ### Data
-A range of data is passed to Handlebars:
+A range of data is passed to Hugo:
 
-* `src/html/data/index.json` - site-wide data including:
+* `./config.toml` - site-wide data including:
 	* `nb` - A couple of site-wide variables - the name of the site and the legal name of the client (for the copyright text). These map to the variables used in ProcessWire development. Additional variables could include `clientTel`, `clientEmail` and `clientAddress`.
 	* `ukContainer` - The default `.uk-container` size used by the site.
 	* `cta` - The default 'Call to Action' text.
@@ -93,25 +61,17 @@ A range of data is passed to Handlebars:
 	* `social` - An array of social media data.
 	* `legal` - These should not need to be changed, as these are standard on all projects.
 	* `items` - arrays of items to be rendered on the site.
-* A number of variables are generated based on the template name, and passed to `page` e.g. `page.name` (see `build/tasks/html.js`).
-* These variables can be overwritten and/or extended by a `[template-name].json` file in `src/html/data`.
-* A few helpers (see `build/tasks/html.js`).
+* `./params.toml` - site-wide data including:
 
 ### Partials
 Where possible, the provided partials should be used (and can be edited where necessary).
 
 ## Linting
-ESlint and Sasslint are enabled in this package, but in different ways. ESlint should be enabled in your code editor, whereas Sasslint is run while SCSS files are being watched.
-
-*Note: .eslintignore does not appear to work!*
+ESlint and Stylelint are enabled in this package, but in different ways. ESlint should be enabled in your code editor, whereas Stylelint is run while SCSS files are being watched.
 
 ## Release
 When the project is complete, run:
 
 	yarn release
 
-This will reset the project and build everything again, and will also run:
-
-	yarn pw
-
-which prepares files for ProcessWire development.
+This will create CHANGELOG.md file.

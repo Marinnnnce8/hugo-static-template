@@ -1,6 +1,6 @@
 {{ define "title" }}404 Page Not Found | {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-	<div class='uk-container uk-container-small'>
+	<div class='uk-container uk-container-{{ .Site.Params.size }}'>
 		<h1>404 - Page Not Found</h1>
 		<p>Sorry, the page you are looking for could not be found.</p>
 		<p><a href='{{ "/" | relURL }}'>Return Home</a></p>
