@@ -4,7 +4,7 @@
 
 // Background Icon
 @mixin bg-icon($icon) {
-    background-image: url('data:image/svg+xml;utf8,'+ $icon);
+    background-image: url('data:image/svg+xml;utf8,' + $icon);
     background-repeat: no-repeat;
 }
 
@@ -22,7 +22,7 @@
 
 // Image caption
 @mixin image-caption {
-    font-size: 0.8rem;
+    font-size: .8rem;
     padding: $global-small-margin;
     text-align: center;
 }

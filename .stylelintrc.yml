@@ -1,76 +1,69 @@
-#a11y #nextjs #react #beginners
 defaultSeverity: warning
 extends:
     - stylelint-config-standard
+    - stylelint-config-recommended
+    - stylelint-config-sass-guidelines
+plugins:
+  - stylelint-scss
 rules:
-# Line Spacing
-rule-empty-line-before:
-    - always-multi-line
+  block-closing-brace-newline-after:
+    - always
+    - ignoreAtRules:
+      - if
+      - else
+  block-no-empty: true
+  color-hex-case: lower
+  color-hex-length: short
+  color-no-invalid-hex: true
+  declaration-block-no-duplicate-properties: true
+  declaration-block-no-redundant-longhand-properties: true
+  declaration-block-no-shorthand-property-overrides: true
+  declaration-block-trailing-semicolon: always
+  function-calc-no-unspaced-operator: true
+  function-url-no-scheme-relative: true
+  function-url-quotes: null
+  length-zero-no-unit: true
+  no-duplicate-at-import-rules: true
+  no-eol-whitespace: true
+  no-extra-semicolons: true
+  property-no-unknown: true
+  rule-empty-line-before:
+    - always
     - ignore:
-        - after-comment
-        - first-nested
-        - inside-block
-
-# Disallows
-selector-max-id: 2
-comment-no-empty: true
-declaration-block-no-duplicate-properties: true
-block-no-empty:
+      - after-comment
+      - first-nested
+      - inside-block
+  selector-pseudo-class-no-unknown: true
+  selector-pseudo-element-no-unknown:
     - true
-    - ignore:
-        - comments
-no-descending-specificity:
-    - true
-    - ignore:
-        - selectors-within-list
-no-extra-semicolons: true
-color-no-invalid-hex: true
-number-no-trailing-zeros: true
-length-zero-no-unit: true
-scss/at-extend-no-missing-placeholder: null
-selector-no-qualifying-type:
-    - true
-    - ignore:
-        - attribute
-        - class
-        - id
-property-no-unknown:
-    - true
-    - ignoreProperties:
-        - 'box-orient'
-
-# Nesting
-max-nesting-depth:
-    - 5
-    - ignore: ['blockless-at-rules', 'pseudo-classes']  
-
-# Name Formats
-selector-class-pattern: ^[A-Z].*$
-scss/at-mixin-pattern: ^[A-Z].*$  
-
-# Style Guide
-indentation: 2
-color-named: 'never'
-declaration-block-trailing-semicolon: always
-unit-case: lower
-color-hex-case: lower
-number-leading-zero: always
-unit-no-unknown:
+    - ignorePseudoElements:
+        ng-deep
+  scss/at-rule-no-unknown: true
+  scss/dollar-variable-colon-space-after: always
+  scss/dollar-variable-colon-space-before: never
+  scss/operator-no-unspaced: true
+  shorthand-property-no-redundant-values: true
+  string-quotes: single
+  unit-case: lower
+  unit-no-unknown:
     - true
     - ignoreUnits:
-        - /^[-+][\d$(]/
-font-family-no-duplicate-names: true
-string-quotes: single
-selector-max-compound-selectors: 6
-
-# Inner Spacing
-function-calc-no-unspaced-operator: true
-declaration-block-semicolon-newline-after: always
-block-opening-brace-space-before: always
-block-opening-brace-newline-after: always
-block-closing-brace-newline-after: always
-declaration-bang-space-after: never
-declaration-colon-space-after: always
-
-# Final Items
-scss/at-import-partial-extension-blacklist: [/css/]
+      - /^[-+][\d$(]/
+  value-keyword-case: null
+  indentation: null
+  max-nesting-depth: 5
+  selector-class-pattern: null
+  no-empty-source: null
+  order/properties-alphabetical-order: null
+  number-leading-zero: never
+  max-empty-lines: 3
+  comment-whitespace-inside: never
+  no-invalid-position-at-import-rule: null
+  declaration-empty-line-before: null
+  scss/dollar-variable-pattern: null
+  selector-max-compound-selectors: 5
+  no-descending-specificity: null
+  declaration-property-value-allowed-list: 
+    - object: 
+      -unprefixed-property-name: 
+        - [array, of, values]

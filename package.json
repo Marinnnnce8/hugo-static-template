@@ -31,7 +31,8 @@
     "test": "npm run -s lint",
     "env": "env",
     "precheck": "npm version",
-    "check": "hugo version"
+    "check": "hugo version",
+    "stylelint-fix": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\" --fix"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0",
@@ -48,13 +49,15 @@
     "rimraf": "^3.0",
     "shx": "^0.3.3",
     "standard-version": "^9.2",
-    "stylelint": "^13.13",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.20.1",
     "uikit": "^3.7.2"
   },
   "dependencies": {
     "mmenu-js": "^8.5.24"
   },
-  "sasslintConfig": ".sass-lint.yml",
   "main": "index.js"
 }

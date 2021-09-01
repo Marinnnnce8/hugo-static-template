@@ -2,17 +2,17 @@
 @import 'abstracts/variables';
 
 /** Import UIkit */
-@import "uikit/src/scss/variables-theme";
-@import "uikit/src/scss/variables";
-@import "uikit/src/scss/mixins";
-@import "uikit/src/scss/mixins-theme";
-@import "uikit/src/scss/uikit";
-@import "uikit/src/scss/uikit-theme";
+@import 'uikit/src/scss/variables-theme';
+@import 'uikit/src/scss/variables';
+@import 'uikit/src/scss/mixins';
+@import 'uikit/src/scss/mixins-theme';
+@import 'uikit/src/scss/uikit';
+@import 'uikit/src/scss/uikit-theme';
 
 @import 'abstracts/mixins';
 
 /** Import mmenu */
-@import "mmenu-js/src/mmenu";
+@import 'mmenu-js/src/mmenu';
 
 @import 'base/reset';
 @import 'base/typography';
