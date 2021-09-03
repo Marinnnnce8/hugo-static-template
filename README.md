@@ -55,6 +55,7 @@ A range of data is passed to Hugo:
 
 * `./config.toml` - site-wide data including:
 	*  A couple of site-wide variables - it includes `author`-> `name`, the name of the site (`title`) and the legal name of the client, `params` -> `clientName` (for the copyright text).
+	* `instantPage` - An boolean for using (or excluding) just-in-time preloading plugin [instant.page](https://instant.page/).
 	* `menu` - An array of title/name objects that defines the site menu.
 
 ### Partials

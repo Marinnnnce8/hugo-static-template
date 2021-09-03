@@ -1,3 +1,7 @@
+{{ if .Site.Params.instantPage -}}
+	{{ $instantPage := resources.Get "js/instantpage.js" }}
+	<script src="{{ $instantPage.Permalink }}"></script>
+{{ end -}}
 {{ $uk := resources.Get "js/uikit.min.js" }}
 <script src="{{ $uk.Permalink }}"></script>
 <script src='{{ .Site.BaseURL }}js/nbkit.min.js'></script>

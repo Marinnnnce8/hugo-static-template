@@ -35,7 +35,7 @@
   "devDependencies": {
     "eslint": "^7.24",
     "hugo-bin": "^0.75",
-    "instant.page": "^5.1",
+    "instant.page": "^5.1.0",
     "markdownlint-cli": "^0.28.1",
     "rimraf": "^3.0",
     "standard-version": "^9.2",
