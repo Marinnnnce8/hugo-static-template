@@ -14,18 +14,16 @@
   "scripts": {
     "init": "rimraf .git && git init -b main",
     "create": "hugo new",
-    "prestart": "npm run clean",
     "start": "hugo server --bind=0.0.0.0 --disableFastRender",
     "prebuild": "npm run clean",
-    "build": "hugo --gc --minify && npm run build:functions",
-    "build:functions": "netlify-lambda build assets/lambda",
+    "build": "hugo --gc --minify",
     "build:preview": "npm run build -D -F",
     "clean": "rimraf public resources functions",
     "server": "hugo server",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
-    "lint:scripts": "eslint assets/js assets/lambda config",
+    "lint:scripts": "eslint assets/js",
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
-    "lint:markdown": "markdownlint *.md content/**/*.md",
+    "lint:markdown": "markdownlint content/**/*.md",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
     "test": "npm run -s lint",
@@ -39,9 +37,7 @@
     "hugo-bin": "^0.75",
     "instant.page": "^5.1",
     "markdownlint-cli": "^0.28.1",
-    "netlify-lambda": "^2.0",
     "rimraf": "^3.0",
-    "shx": "^0.3.3",
     "standard-version": "^9.2",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
@@ -51,7 +47,8 @@
     "uikit": "^3.7.2"
   },
   "dependencies": {
-    "mmenu-js": "^8.5.24"
+    "mmenu-js": "^8.5.24",
+    "postcss": "^8.3.6"
   },
   "main": "index.js"
 }

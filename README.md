@@ -19,11 +19,11 @@ First run:
 
 	yarn build
 
-This will copy the `uikit.min.js` file into the `js` folder. It will also create public, functions and resources folders with and it will copy assets into the `resources` folder.
+This will copy the `uikit.min.js` file into the `js` folder. It will also create public and resources folders with and it will copy assets into the `resources` folder.
 
 If you need to run this task again run:
 
-	yarn prestart (or yarn prebuild) && yarn build
+	yarn prebuild && yarn build
 
 This will reset the project before it is built again.
 
@@ -67,7 +67,21 @@ A range of data is passed to Hugo:
 Where possible, the provided partials should be used (and can be edited where necessary).
 
 ## Linting
-ESlint and Stylelint are enabled in this package, but in different ways. ESlint should be enabled in your code editor, whereas Stylelint is run while SCSS files are being watched.
+ESlint, Stylelint and Markdownlint are enabled in this package and can be run with:
+
+	yarn lint
+
+ESlint can be run with:
+
+	lint:scripts
+
+Stylelint is run with:
+
+	lint:styles
+
+And Markdownlint is run with:
+
+	lint:markdown
 
 ## Release
 When the project is complete, run:
