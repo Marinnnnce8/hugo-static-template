@@ -39,15 +39,3 @@ bgColor = "#fff"
 landscapePhotoWidths = [900, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
-
-# Footer
-clientName = "NB Communication"
-
-# Alert
-alert = false
-alertText = "This is some alert text!</a>"
-
-# Edit Page
-docsRepo = "https://github.com/nbcommunication/nb-template-site-static"
-editPage = false
-

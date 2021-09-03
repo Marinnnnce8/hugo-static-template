@@ -22,7 +22,7 @@ rssLimit = 10
 	email = "administrator@nbcommunication.com"
 	dateFormat = "02 Jan 2006"
 	analyticsID = ""
-	size = "small"
+	clientName = "NB Communication"
 
 [params.dev]
   live = false

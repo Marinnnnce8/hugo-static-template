@@ -54,14 +54,8 @@ See https://github.com/uikit/uikit/tree/develop/src/scss for more information on
 A range of data is passed to Hugo:
 
 * `./config.toml` - site-wide data including:
-	* `nb` - A couple of site-wide variables - the name of the site and the legal name of the client (for the copyright text). These map to the variables used in ProcessWire development. Additional variables could include `clientTel`, `clientEmail` and `clientAddress`.
-	* `ukContainer` - The default `.uk-container` size used by the site.
-	* `cta` - The default 'Call to Action' text.
+	*  A couple of site-wide variables - it includes `author`-> `name`, the name of the site (`title`) and the legal name of the client, `params` -> `clientName` (for the copyright text).
 	* `menu` - An array of title/name objects that defines the site menu.
-	* `social` - An array of social media data.
-	* `legal` - These should not need to be changed, as these are standard on all projects.
-	* `items` - arrays of items to be rendered on the site.
-* `./params.toml` - site-wide data including:
 
 ### Partials
 Where possible, the provided partials should be used (and can be edited where necessary).
